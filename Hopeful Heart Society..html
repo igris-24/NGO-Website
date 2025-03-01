@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOPEFUL HEART SOCIETY</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: rgb(207, 152, 79);
+            height: auto;
+            background-image: url(wremo.jpeg);
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: antiquewhite;
+        }
+
+        .logo-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            margin: 20px;
+        }
+
+
+        .logo {
+            width: 250px;
+            height: auto;
+        }
+
+        header {
+
+            color: whitesmoke;
+            padding: 1rem;
+            text-align: center;
+            color: whitesmoke;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            margin-left: 50px;
+        }
+
+
+        .navbar {
+            position: absolute;
+            top: 0;
+            right: 0;
+            margin: 10px;
+            /* Add margin to give some space from the edge */
+        }
+
+        .navbar ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        .navbar li {
+            margin-left: 20px;
+            /* Space between nav items */
+        }
+
+        .navbar a {
+            text-decoration: none;
+            color: whitesmoke;
+            font-weight: bold;
+            padding: 10px;
+        }
+
+        .navbar a:hover {
+            color: #007bff;
+        }
+
+
+        main {
+            padding: 2rem;
+        }
+
+        section {
+            margin-bottom: 2rem;
+            color: white;
+        }
+
+        #about {
+
+            color: white;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+        }
+
+        #Vision h2 {
+            color: black;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+        }
+
+        .container {
+            display: flex;
+            width: 90%0;
+            height: 400px;
+            border: 2px;
+            backdrop-filter: blur(6px);
+            align-items: center;
+        }
+
+        .left {
+            width: 40%;
+            height: 300px;
+            padding: 20px;
+
+            background-color: antiquewhite;
+            border-right: 2px solid;
+            background-image: url(https://rebirthcaretrust.org/wp-content/uploads/2020/08/cover-1543465861.jpg);
+            background-size: cover;
+            display: flex;
+            align-items: end;
+
+
+        }
+
+        .l,
+        .r {
+            height: 50px;
+            overflow: hidden;
+            transition: height 1s;
+        }
+
+        .left:hover .l {
+            height: 300px;
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(6px);
+
+
+        }
+
+        .right:hover .r {
+            height: 300px;
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(6px);
+            color: black;
+
+
+        }
+
+        .right {
+            width: 40%;
+            height: 300px;
+            flex: 1;
+            padding: 20px;
+
+            background-color: antiquewhite;
+            border-left: 2px solid;
+            background-image: url(https://www.logos.com/grow/wp-content/uploads/2022/11/orphan.jpg);
+            background-size: cover;
+            background-position: center;
+            ;
+            display: flex;
+            align-items: end;
+        }
+
+
+        .card-container {
+            display: flex;
+            gap: 20px;
+            justify-content: space-evenly;
+            margin-bottom: 50px;
+
+        }
+
+        .card {
+            width: 250px;
+            height: 350px;
+            position: relative;
+            transform-style: preserve-3d;
+            transition: transform 0.6s;
+        }
+
+        .card:hover {
+            transform: rotateY(180deg);
+        }
+
+        .card-front,
+        .card-back {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+        }
+
+        .card-front {
+            background-color: rgb(207, 152, 79);
+            color: white;
+        }
+
+        .card-back {
+            background-color: lightseagreen;
+            color: black;
+            transform: rotateY(180deg);
+            cursor: pointer;
+        }
+
+        .card-front h1,
+        .card-back h1 {
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+
+        .card-front p,
+        .card-back p {
+            font-size: 16px;
+            line-height: 1.5;
+        }
+
+
+        .card-back .btn {
+            background-color: #00796b;
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 20px;
+            width: 180px;
+            text-align: center;
+        }
+
+        .card-back .btn:hover {
+            background-color: #004d40;
+        }
+
+
+        .card-container {
+            display: flex;
+            gap: 20px;
+            justify-content: space-evenly;
+            margin-top: 20px;
+        }
+
+
+        .card {
+            width: 250px;
+            height: 350px;
+            position: relative;
+            transform-style: preserve-3d;
+            transition: transform 1s;
+        }
+
+        .card:hover {
+            transform: rotateY(180deg);
+        }
+
+        .box {
+            height: 500px;
+            width: 100%;
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        .box img {
+            transition: transform 1s;
+        }
+
+        .box img:hover {
+            transform: scale(1.1);
+        }
+
+
+
+
+
+        #contact {
+            width: 100%;
+            height: 500px;
+
+        }
+
+        h2 {
+            color: black;
+        }
+
+        form label {
+            display: block;
+            margin-bottom: .5rem;
+            color: black;
+
+        }
+
+        form input,
+        form textarea {
+            width: 250px;
+            padding: .5rem;
+            margin-bottom: 1rem;
+            margin-left: 1rem;
+            border: 1px solid;
+            border-radius: 5px;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+        }
+
+        form button {
+            background-color: rgb(218, 132, 3);
+            color: black;
+            padding: .75rem 1.5rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            box-shadow: 2px 2px 2px;
+            margin-left: 1rem;
+
+
+
+        }
+
+        .next {
+            width: 100%;
+            height: 300px;
+            background-color: rgb(207, 152, 79);
+            background-color: light palevioletred;
+
+        }
+
+        .next .a {
+            width: 30%;
+            float: right;
+            color: whitesmoke
+        }
+
+        .next h2 {
+            color: whitesmoke;
+            margin-top: 70px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="logo-container">
+        <img src="Hopeful_Heart_Society_logo-removebg-preview.png" class="logo">
+    </div>
+    <header class="head">
+        <h2 style="color:whitesmoke">WELCOME TO </h2>
+        <h1>Hopeful Heart Society</h1>
+        <h2 style="color:whitesmoke">A Family for Every Child in Our Lifetime</h2>
+
+        <nav class="navbar">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="about"><br>
+            <h2 style="color: black;">About Us</h2>
+            <p
+                style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;backdrop-filter: blur(7px);">
+                Hopeful Heart Society is a non-profit organization dedicated to providing support and opportunities for
+                orphaned children, empowering them to overcome the challenges they face and paving the way for a
+                brighter future. At the heart of our mission lies a deep commitment to nurturing positive experiences
+                and building resilience in the lives of these vulnerable youth.Hopeful Heart Society is a non-profit
+                organization dedicated to providing support and opportunities for orphaned children, empowering them to
+                overcome the challenges they face and paving the way for a brighter future. At the heart of our mission
+                lies a deep commitment to nurturing positive experiences and building resilience in the lives of these
+                vulnerable youth.
+
+                Inspired by the HOPE framework, which highlights the importance of nurturing relationships, safe
+                environments, social engagement, and emotional competencies, our programs are designed to address the
+                multifaceted needs of orphaned children Through a holistic approach, we strive to equip these young
+                individuals with the tools and resources they need to thrive, ultimately breaking the cycle of poverty
+                and creating a more just and equitable society.
+
+            </p>
+        </section>
+        <section id="Vision">
+            <h2>Our Vision</h2>
+            <article>
+
+                <p
+                    style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;backdrop-filter: blur(7px);">
+                    The Hopeful Heart Society, an organization dedicated to uplifting the lives of orphaned children,
+                    operates under a vision deeply rooted in simplicity and honesty, aiming to cultivate a nurturing
+                    environment where every child feels valued, secure, and empowered to realize their full potential.
+                    Our vision extends beyond merely providing basic necessities; it encompasses fostering holistic
+                    development by addressing the emotional, educational, and social needs of each child, ensuring they
+                    grow into well-rounded individuals capable of contributing positively to society. This vision
+                    acknowledges the profound impact of early childhood experiences on long-term well-being and
+                    emphasizes the importance of creating positive and supportive relationships that promote healthy
+                    development and resilience. We strive to actively promote positive childhood +experiences that
+                    contribute to the healthy development and well-being of the orphans under our care, mitigating the
+                    effects of adverse childhood experiences and other negative environmental influences.
+
+                </p>
+            </article>
+            <article>
+
+                <p
+                    style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;backdrop-filter: blur(7px);">
+                    The Hopeful Heart Society, an NGO dedicated to providing a nurturing and supportive environment for
+                    orphaned children, envisions a world where every child, regardless of their circumstances, is given
+                    the opportunity to thrive and reach their full potential.At the core of you we serve, fostering
+                    trust and accountability . Recognizing
+                    the importance of addressing emotional wounds, our vision includes providing therapeutic
+                    interventions and emotional support to help children heal from past traumas and develop healthy
+                    coping mechanisms (“SAFETY HOME SUPPORT FOR ORPHAN,” 2020).</p>
+            </article>
+        </section>
+
+
+        <div class="container">
+            <section class="left">
+                <div class="l">
+                    <h2>Prevent Children From Entering the System</h2>
+                    <p style="color:black;">The orphan crisis will never end until we stop it at the source. This means:
+                        Identifying vulnerable families long before the idea of child placement is necessary. Here’s how
+                        we do it.</p>
+                </div>
+            </section>
+            <section class="right">
+                <div class="r">
+                    <h2>Unite Children with Families</h2>
+                    <p>
+                        It’s time to move from orphanages to families, and we have a proven field-tested method to make
+                        sure this is done safely. Help us bring them home.
+                    </p>
+                </div>
+            </section>
+
+        </div><br><br>
+        <hr>
+        <div class="card-container">
+            <div class="card">
+                <div class="card-front">
+                    <h1>Make a donation</h1>
+                    <p></p>
+                </div>
+                <div class="card-back">
+                    <h1></h1>
+                    <p>With every rupee, our goal of ending the need for childcare institutions gets a little bit
+                        closer.</p><br><br>
+                    <button class="btn" type="submit">Become a Donor</button>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-front">
+                    <h1>Be a hearbeat contributor</h1>
+                    <p></p>
+                </div>
+                <div class="card-back">
+                    <h1></h1>
+                    <p>There is no more powerful way to support the children we serve than by becoming a monthly
+                        contributor.
+                        Your charitable giving month after month keeps us going.</p>
+                    <button class="btn" type="submit">Support our work</button>
+                </div>
+            </div>
+        </div><br><br>
+        <hr>
+        <div class="box">
+            <img src="https://imgs.search.brave.com/75iyx_fp2_FZsfguZZSbVDluc2qp02dx3VmCM5G_vh4/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9yZWZh/aGNvY3VrLm9yZy9v/b2Rvd2Vldy8yMDIz/LzA1L0lNR18wNjY4/LXNjYWxlZC5qcGc"
+                alt="">
+            <img
+                src="https://imgs.search.brave.com/0XsHOxMuDvOAml1G3mVGx7FFRKOh0EdMG1XpcdGgpOo/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9kY2N3/Lm9yZy9pbWFnZXMv/SW50ZXJuYXRpb25h/bCUyMERheSUyMG9m/JTIwdGhlJTIwR2ly/bCUyMENoaWxkLTdN/OUcwdURWLmpwZw">
+        </div>
+
+        <hr>
+        <section id="contact"><br><br>
+            <h2>Contact Us</h2>
+            <form action="#" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea><br> <br>
+                <button type="submit">submit</button>
+            </form>
+        </section>
+
+    </main>
+    <footer>
+        <p style="color:whitesmoke">&copy; 2025 Our NGO. All rights reserved.</p>
+    </footer>
+    <div class="next">
+
+        <div class="a">
+
+            <h2>Hopeful Heart Society</h2>
+            <ul class="About">
+                <li>About Hopeful Heart Society</li>
+                <li> Our Founding Story with Milestones</li>
+                <li>The Problem</li>
+                <li> Mission Vision and Values</li>
+                <li>Our Team</li>
+                <li>Policies</li>
+            </ul>
+        </div>
+        <div class="a">
+            <ul>
+                <h2> What we do</h2>
+                <li>Preventing children from entering CCIs</li>
+                <li>Reintegrating children with families</li>
+                <li>Youth Enablement</li>
+            </ul>
+
+        </div>
+
+        <div class="a">
+            <h2>Contact</h2>
+            <p>
+
+                G29, Upper Ground Floor, Lajpat Nagar III,
+                Behind Fab India, Lajpat Nagar,
+                indore – 452018 India
+
+                contact@hopefulheartsociety.org
+
+                (011)5565465</p>
+
+
+        </div>
+    </div>
+
+
+
+
+
+
+</body>
+
+</html>
